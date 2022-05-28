@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import {createTheme, ThemeProvider} from "@mui/material/styles";
+import {CssBaseline} from "@mui/material";
+
+import Main from "./Main/main";
+import {View} from "./Components/View";
+
+import {observer} from "mobx-react-lite";
+import storeView from "./Store/storeView";
+
+const App = observer((props) => {
+    const [themeUI, setThemeUI] = useState(createTheme({palette: {mode: 'light',},})); // переезд
+
+    return (
+        <ThemeProvider theme={themeUI}>
+            <CssBaseline>
+                <View activeView={storeView.activeView.app}>
+                    <Main id="main"/>
+                </View>
+            </CssBaseline>
+        </ThemeProvider>
+    );
+});
 
 export default App;
