@@ -16,6 +16,7 @@
     "mobx": "^6.4.1",
     "mobx-react": "^7.3.0",
     "mobx-react-lite": "^3.3.0",
+    "myiit-api-lib": "^1.0.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",

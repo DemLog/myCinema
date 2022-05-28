@@ -2,7 +2,8 @@ import {makeAutoObservable} from "mobx";
 
 class StoreView {
     activeView = {
-        app: "main",
+        auth: "login",
+        app: "auth",
         main: "main",
         films: "list",
         hells: "list"

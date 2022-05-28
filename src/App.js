@@ -4,6 +4,7 @@ import {createTheme, ThemeProvider} from "@mui/material/styles";
 import {CssBaseline} from "@mui/material";
 
 import Main from "./Main/main";
+import Auth from "./Auth/auth"
 import {View} from "./Components/View";
 
 import {observer} from "mobx-react-lite";
@@ -17,6 +18,7 @@ const App = observer((props) => {
             <CssBaseline>
                 <View activeView={storeView.activeView.app}>
                     <Main id="main"/>
+                    <Auth id="auth"/>
                 </View>
             </CssBaseline>
         </ThemeProvider>
